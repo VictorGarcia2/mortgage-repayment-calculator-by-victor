@@ -1,0 +1,190 @@
+/* - White: hsl(0, 0%, 100%)
+- Slate 100: hsl(202, 86%, 94%)
+- Slate 300: hsl(203, 41%, 72%)
+- Slate 500: hsl(200, 26%, 54%)
+- Slate 700: hsl(200, 24%, 40%)
+- Slate 900: hsl(202, 55%, 16%) */
+/* - Lime: hsl(61, 70%, 52%)
+- Red: hsl(4, 69%, 50%) */
+/* - Family: [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans)
+- Weights: 500, 700 */
+
+h1 {
+    color: hsl(202, 55%, 16%);
+    font-weight: 700;
+    font-family: "Plus Jakarta Sans", serif;
+    font-style: normal;
+}
+h2{
+    color: hsl(200, 24%, 40%);
+    font-family: "Plus Jakarta Sans", serif;
+    font-style: normal;
+    font-weight: 500;
+}
+h4{
+    color: hsl(202, 86%, 94%);
+    font-family: "Plus Jakarta Sans", serif;
+    font-style: normal;
+    font-weight: 400; 
+    font-size: 1rem;
+}
+
+p {
+    color: hsl(200, 24%, 40%);
+    text-decoration: underline;
+    font-family: "Plus Jakarta Sans", serif;
+    font-style: normal;
+}
+span{
+    width: 100%;
+}
+input{
+    
+    width: 100%;
+    height: 2.8125rem;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    outline: none;
+    border: 1.4px solid hsl(200, 24%, 40%);
+}
+
+.libra{
+    background-color: hsl(202, 86%, 94%);
+    text-align: center;
+    margin-top: 1px;
+    margin-left: 1px !important;
+    width: 2.8125rem;
+    height: 2.625rem;
+    font-weight: 700;
+    font-family: "Plus Jakarta Sans", serif;
+    font-style: normal;
+    text-decoration: none;
+}
+.years{
+    background-color: hsl(202, 86%, 94%);
+    text-align: center;
+    margin-top: 1px !important;
+    margin-right: 2px !important;
+    width: 4.375rem;
+    height: 2.625rem;
+    font-weight: 700;
+    font-family: "Plus Jakarta Sans", serif;
+    font-style: normal;
+    text-decoration: none;
+}
+.porcentaje{
+    background-color: hsl(202, 86%, 94%);
+    text-align: center;
+    margin-top: 1px !important;
+    margin-right: 2px !important;
+    width: 2.8125rem;
+    height: 2.625rem;
+    font-weight: 700;
+    font-family: "Plus Jakarta Sans", serif;
+    font-style: normal;
+    text-decoration: none;
+}
+
+.repayment{
+
+    height: 2.8125rem;
+    border: 1.4px solid hsl(200, 24%, 40%);
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+.repayment:hover{
+    background-color: hsla(61, 70%, 52%, 0.116);
+    border-color: hsl(61, 70%, 52%);
+}
+.radio:hover{
+    border-color: hsl(61, 70%, 52%);
+    background-color: hsl(61, 70%, 52%);
+}
+
+.mortgage{
+    font-weight: 700;
+    font-family: "Plus Jakarta Sans", serif;
+    font-style: normal;
+    text-decoration: none;
+    color: hsl(202, 55%, 16%);
+}
+
+.submit{
+    margin-top: 5%;
+    width: 21.25rem  !important;
+    height: 2.8125rem;
+    border: 0 solid hsl(200, 24%, 40%);
+    background-color: hsl(61, 70%, 52%);
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    font-weight: 700;
+    font-family: "Plus Jakarta Sans", serif;
+    font-style: normal;
+    text-decoration: none;
+    color: hsl(202, 55%, 16%);
+}
+.bg-results{
+    width: 100%;
+    height: 450px;
+    background-color: hsl(202, 55%, 16%);
+
+}
+.copy{
+    font-weight: 300;
+    font-family: "Plus Jakarta Sans", serif;
+    font-style: normal;
+    text-decoration: none;
+    color: hsl(202, 86%, 94%);
+    font-size: 1rem;
+}
+.bg-primary{
+    width: 100%;
+    height: 23px;
+    background-color: hsl(61, 70%, 52%) !important;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.bg-secondary{
+    position: absolute;
+    margin-top: 1% !important;
+    width: 88%;
+    height: 230px;
+    background-color: #0e2431  !important;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.results{
+    font-weight: 700;
+    font-family: "Plus Jakarta Sans", serif;
+    font-style: normal;
+    text-decoration: none;
+    color: hsl(61, 70%, 52%);
+    font-size: 2rem;
+}
+.results-replay{
+    font-weight: 700;
+    font-family: "Plus Jakarta Sans", serif;
+    font-style: normal;
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+    font-size: 1.3rem;
+}
+.divisor{
+    margin: auto;
+    width: 90%;
+}
