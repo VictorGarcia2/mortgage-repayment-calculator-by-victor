@@ -54,7 +54,6 @@ function getResults() {
         fieldAlertTerm.classList.remove('d-none')
         fieldAlertAll.classList.remove('d-none')
     }
-
 }
 
 function clearTablero() {
@@ -120,4 +119,3 @@ function toggleModalResults() {
     empty.classList.add('d-none')
 }
 send.addEventListener('click', getResults)
-
