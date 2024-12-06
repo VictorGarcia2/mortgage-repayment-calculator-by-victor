@@ -226,3 +226,6 @@ i:active{
     color: hsl(202, 86%, 94%);
     font-size: 1rem;
 }
+#clear{
+    cursor: pointer;
+}
