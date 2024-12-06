@@ -53,6 +53,7 @@ input {
     -o-border-radius: 3px;
     outline: none;
     border: 1.4px solid hsl(200, 24%, 40%);
+    
 }
 
 input:focus{
@@ -413,7 +414,6 @@ i:focus{
     font-size: 14px;
 }
  .control input {
-    
         position: absolute;
         z-index: -1;
         opacity: 0;
@@ -425,8 +425,7 @@ i:focus{
     height: 15px;
     width: 15px;
     background: #ffffff;
-    border: 0px dashed #fff900;
-    border-radius: undefinedpx;
+    border: 1px solid #838383;
 }
 .control:hover input ~ .control_indicator,
 .control input:focus ~ .control_indicator {

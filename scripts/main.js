@@ -71,6 +71,7 @@ function clearTablero() {
     years.style = ""
     porcentaje.style = ""
     ModalfinalResult.classList.add('d-none')
+    empty.classList.remove('d-none')
 
 }
 amountYears.addEventListener('input', () => {
@@ -118,6 +119,7 @@ function toggleModal() {
 }
 function toggleModalResults() {
     ModalfinalResult.classList.remove('d-none')
+    empty.classList.add('d-none')
 }
 send.addEventListener('click', getResults)
 
