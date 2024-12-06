@@ -36,16 +36,14 @@ function getResults() {
         resultsMonthly.textContent = `₤${rs.toLocaleString('en')}`
         total = rs * n
         resultsTotal.textContent = `₤${total.toLocaleString('en')}`
-        
         toggleModalResults()
     } else if (interestOnly.checked && mortgageAmount !== 0 && mortgageTerm !== 0 && interest !== 0) {
         let interesT = rs * n - p
         resultsMonthly.textContent = `₤${interesT.toLocaleString('en')}`
         total = rs * n
         resultsTotal.textContent = `₤${total.toLocaleString('en')}`
-     
         toggleModalResults()
-    } else if (!repayment.checked && !interestOnly.checked && amountData.value === "" && amountYears.value === "" && interestRate.value === "") {
+    } else if (!repayment.checked || !interestOnly.checked && amountData.value === "" && amountYears.value === "" && interestRate.value === "") {
         alertas.style = "border: 1.4px solid hsl(4, 69%, 50%);"
         alertasTerm.style = "border: 1.4px solid hsl(4, 69%, 50%);"
         alertasAll.style = "border: 1.4px solid hsl(4, 69%, 50%);"
