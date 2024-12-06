@@ -44,7 +44,7 @@ function getResults() {
         })
     }
 }
-getResults() 
+
 /* getRetults()
 function interesTotal(resultsMonthly, resultsTotal, n) {
     let iTotal = resultsMonthly * resultsTotal - n
@@ -63,3 +63,4 @@ function interesTotal(resultsMonthly, resultsTotal, n) {
     function toggleModalResults() {
         ModalfinalResult.classList.toggle('d-none')
     }
+    getResults() 
