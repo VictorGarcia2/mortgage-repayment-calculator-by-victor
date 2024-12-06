@@ -8,6 +8,7 @@ const resultsTotal = document.querySelector('#results-total')
 const empty = document.querySelector('.empty')
 const ModalfinalResult = document.querySelector('.final-result')
 const repayment = document.querySelector('#repayment')
+const interestOnly = document.querySelector('#interest-only')
 const clear = document.querySelector('#clear')
 
 let mortgageAmount = 0
@@ -24,7 +25,6 @@ function getResults() {
         r = int / 12;
         n = mortgageTerm * 12;
         let rs = (p * r * (1 + r) ** n) / ((1 + r) ** n - 1);
-
         send.addEventListener('click', () => {
             if (repayment.checked) {
                 resultsMonthly.textContent = `₤${rs.toLocaleString('en')}`
@@ -32,14 +32,13 @@ function getResults() {
                 resultsTotal.textContent = `₤${total.toLocaleString('en')}`
                 toggleModal()
                 toggleModalResults()
-            } else {
+            } else if(interestOnly.checked){            
                 let interesT = rs * n - p
                 resultsMonthly.textContent = `₤${interesT.toLocaleString('en')}`
                 total = rs * n
                 resultsTotal.textContent = `₤${total.toLocaleString('en')}`
                 toggleModal()
                 toggleModalResults()
-
             }
         })
     }
