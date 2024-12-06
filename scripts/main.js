@@ -24,23 +24,20 @@ function getResults() {
         r = int / 12;
         n = mortgageTerm * 12;
         let rs = (p * r * (1 + r) ** n) / ((1 + r) ** n - 1);
-        form.addEventListener('click', (e) => {
-            let target = e.target
-            if (target.tagName === "INPUT" && target.id === "repayment") {
-                send.addEventListener('click', () => {
-                    resultsMonthly.textContent = `${rs.toFixed(2)}`
-                    resultsTotal.textContent = `${rs.toFixed(3) * n}`
-                    toggleModal()
-                    toggleModalResults()
-                })
-            } else if (target.tagName === "INPUT" && target.id === "interest-only") {
-                send.addEventListener('click', () => {
-                    let interesT = rs * n - p
-                    resultsMonthly.textContent = `${interesT.toFixed(3)}`
-                    resultsTotal.textContent = `${rs.toFixed(3) * n}`
-                    toggleModal()
-                    toggleModalResults()
-                })
+
+        send.addEventListener('click', () => {
+            if (repayment.checked) {
+                resultsMonthly.textContent = `${rs.toFixed(2)}`
+                resultsTotal.textContent = `${rs.toFixed(3) * n}`
+                toggleModal()
+                toggleModalResults()
+            } else {
+                let interesT = rs * n - p
+                resultsMonthly.textContent = `${interesT.toFixed(3)}`
+                resultsTotal.textContent = `${rs.toFixed(3) * n}`
+                toggleModal()
+                toggleModalResults()
+
             }
         })
     }
@@ -50,20 +47,12 @@ function clearTablero() {
     mortgageAmount = 0
     mortgageTerm = 0
     interest = 0
-    
-    amountData.value   = ""
-    amountYears.value  = ""
+    amountData.value = ""
+    amountYears.value = ""
     interestRate.value = ""
-   
+    resultsMonthly = "--"
+    resultsTotal = "--"
 }
-
-/* getRetults()
-function interesTotal(resultsMonthly, resultsTotal, n) {
-    let iTotal = resultsMonthly * resultsTotal - n
-} */
-/* function operation() {   
-}
- */
 
 amountYears.addEventListener('input', getResults)
 amountData.addEventListener('input', getResults)
