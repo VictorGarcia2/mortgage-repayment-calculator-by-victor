@@ -27,14 +27,16 @@ function getResults() {
 
         send.addEventListener('click', () => {
             if (repayment.checked) {
-                resultsMonthly.textContent = `${rs.toFixed(2)}`
-                resultsTotal.textContent = `${rs.toFixed(3) * n}`
+                resultsMonthly.textContent = `₤${rs.toLocaleString('en')}`
+                total = rs * n
+                resultsTotal.textContent = `₤${total.toLocaleString('en')}`
                 toggleModal()
                 toggleModalResults()
             } else {
                 let interesT = rs * n - p
-                resultsMonthly.textContent = `${interesT.toFixed(3)}`
-                resultsTotal.textContent = `${rs.toFixed(3) * n}`
+                resultsMonthly.textContent = `₤${interesT.toLocaleString('en')}`
+                total = rs * n
+                resultsTotal.textContent = `₤${total.toLocaleString('en')}`
                 toggleModal()
                 toggleModalResults()
 
@@ -42,18 +44,14 @@ function getResults() {
         })
     }
 }
-
 function clearTablero() {
-    mortgageAmount = 0
-    mortgageTerm = 0
-    interest = 0
     amountData.value = ""
     amountYears.value = ""
     interestRate.value = ""
-    resultsMonthly = "--"
-    resultsTotal = "--"
+    resultsMonthly = ""
+    resultsTotal = ""
+    toggleModal()
 }
-
 amountYears.addEventListener('input', getResults)
 amountData.addEventListener('input', getResults)
 interestRate.addEventListener('input', getResults)

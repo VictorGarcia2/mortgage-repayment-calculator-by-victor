@@ -14,18 +14,21 @@ h1 {
     font-weight: 700;
     font-family: "Plus Jakarta Sans", serif;
     font-style: normal;
+
 }
-h2{
+
+h2 {
     color: hsl(200, 24%, 40%);
     font-family: "Plus Jakarta Sans", serif;
     font-style: normal;
     font-weight: 500;
 }
-h4{
+
+h4 {
     color: hsl(202, 86%, 94%);
     font-family: "Plus Jakarta Sans", serif;
     font-style: normal;
-    font-weight: 400; 
+    font-weight: 400;
     font-size: 1rem;
 }
 
@@ -35,10 +38,12 @@ p {
     font-family: "Plus Jakarta Sans", serif;
     font-style: normal;
 }
-span{
+
+span {
     width: 100%;
 }
-input{
+
+input {
     width: 100%;
     height: 2.8125rem;
     border-radius: 3px;
@@ -49,15 +54,18 @@ input{
     outline: none;
     border: 1.4px solid hsl(200, 24%, 40%);
 }
-input:hover{
+
+input:hover {
     background-color: hsla(61, 70%, 52%, 0.116);
     border-color: hsl(61, 70%, 52%);
 }
-i:active{
+
+i:active {
     background-color: hsla(61, 70%, 52%, 0.116);
     border-color: hsl(61, 70%, 52%);
 }
-.amount-data{
+
+.amount-data {
     padding-left: 60px;
     font-size: 1rem;
     color: hsl(202, 55%, 16%);
@@ -67,7 +75,8 @@ i:active{
     font-weight: 700;
 
 }
-.amount-all{
+
+.amount-all {
     padding-left: 10px;
     font-size: 1rem;
     color: hsl(202, 55%, 16%);
@@ -78,9 +87,10 @@ i:active{
 
 }
 
-.libra{
+.libra {
     background-color: hsl(202, 86%, 94%);
-    color: hsl(202, 55%, 16%); ;
+    color: hsl(202, 55%, 16%);
+    ;
     text-align: center;
     margin-top: 1px;
     margin-left: 1px !important;
@@ -92,7 +102,7 @@ i:active{
     text-decoration: none;
 }
 
-.years{
+.years {
     background-color: hsl(202, 86%, 94%);
     text-align: center;
     margin-top: 1px !important;
@@ -104,7 +114,8 @@ i:active{
     font-style: normal;
     text-decoration: none;
 }
-.porcentaje{
+
+.porcentaje {
     background-color: hsl(202, 86%, 94%);
     text-align: center;
     margin-top: 1px !important;
@@ -117,8 +128,7 @@ i:active{
     text-decoration: none;
 }
 
-.repayment{
-
+.repayment {
     height: 2.8125rem;
     border: 1.4px solid hsl(200, 24%, 40%);
     border-radius: 3px;
@@ -127,16 +137,45 @@ i:active{
     -ms-border-radius: 3px;
     -o-border-radius: 3px;
 }
-.repayment:hover{
+
+/* input[type="radio"]{
+    display: none !important;
+}
+
+.repayment::before{
+    content: "";
+    height: 20px;
+    width: 20px;
+    border: 3px solid;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
+input[type="radio"]::checked + .repayment{
+    background-color: #0e2431 !important;
+    color: rgb(0, 124, 233) !important;
+}
+input[type="radio"]::checked + .repayment::before{
+    height: 16px;
+    width: 16px;
+    border: 10px solid white;
+    background-color: blueviolet;
+}
+ */
+
+
+/* .repayment:hover{
     background-color: hsla(61, 70%, 52%, 0.116);
     border-color: hsl(61, 70%, 52%);
 }
 .radio:hover{
     border-color: hsl(61, 70%, 52%);
     background-color: hsl(61, 70%, 52%);
-}
+} */
 
-.mortgage{
+.mortgage {
     font-weight: 700;
     font-family: "Plus Jakarta Sans", serif;
     font-style: normal;
@@ -144,9 +183,9 @@ i:active{
     color: hsl(202, 55%, 16%);
 }
 
-.submit{
+.submit {
     margin-top: 5%;
-    width: 21.25rem  !important;
+    width: 21.25rem !important;
     height: 3.1rem;
     border: 0 solid hsl(200, 24%, 40%);
     background-color: hsl(61, 70%, 52%);
@@ -161,13 +200,15 @@ i:active{
     text-decoration: none;
     color: hsl(202, 55%, 16%);
 }
-.bg-results{
+
+.bg-results {
     width: 100%;
     height: 450px;
     background-color: hsl(202, 55%, 16%);
 
 }
-.copy{
+
+.copy {
     font-weight: 300;
     font-family: "Plus Jakarta Sans", serif;
     font-style: normal;
@@ -175,7 +216,8 @@ i:active{
     color: hsl(202, 86%, 94%);
     font-size: 1rem;
 }
-.bg-primary{
+
+.bg-primary {
     width: 100%;
     height: 23px;
     background-color: hsl(61, 70%, 52%) !important;
@@ -185,19 +227,21 @@ i:active{
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
 }
-.bg-secondary{
+
+.bg-secondary {
     position: absolute;
     margin-top: 1% !important;
-    width: 88%;
+    width: 365px;
     height: 230px;
-    background-color: #0e2431  !important;
+    background-color: #0e2431 !important;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
 }
-.results{
+
+.results {
     font-weight: 700;
     font-family: "Plus Jakarta Sans", serif;
     font-style: normal;
@@ -205,7 +249,8 @@ i:active{
     color: hsl(61, 70%, 52%);
     font-size: 2rem;
 }
-.results-replay{
+
+.results-replay {
     font-weight: 700;
     font-family: "Plus Jakarta Sans", serif;
     font-style: normal;
@@ -213,11 +258,13 @@ i:active{
     color: hsl(0, 0%, 100%);
     font-size: 1.3rem;
 }
-.divisor{
+
+.divisor {
     margin: auto;
     width: 90%;
 }
-.empty > p{
+
+.empty>p {
     text-align: center;
     font-weight: 300;
     font-family: "Plus Jakarta Sans", serif;
@@ -226,6 +273,98 @@ i:active{
     color: hsl(202, 86%, 94%);
     font-size: 1rem;
 }
-#clear{
+
+#clear {
     cursor: pointer;
+}
+
+.empty>img {
+    margin: auto;
+    width: 200px;
+}
+.submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    body {
+        width: 100%;
+        padding: 0;
+        margin: 0 auto;
+        background-color: hsl(203, 41%, 72%);
+    }
+    .container {
+        height: 100vh;
+        
+    }
+    .mort {
+        display: flex !important;
+        width: 900px;
+        height: 500px;
+        margin-top: 10% !important;
+        background-color: white;
+        border-radius: 30px;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        -ms-border-radius: 30px;
+        -o-border-radius: 30px;
+    }
+
+    .bg-results {
+        height: 500px;
+        border-radius: 0px 30px 30px 80px;
+        -webkit-border-radius: 0px 30px 30px 80px;
+        -moz-border-radius: 0px 30px 30px 80px;
+        -ms-border-radius: 0px 30px 30px 80px;
+        -o-border-radius: 0px 30px 30px 80px;
+    }
+
+    .submit {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bg-primary {
+        width: 410px;
+
+    }
+
+    .bg-secondary {
+        position: absolute;
+        margin-top: 2px !important;
+        width: 410px;
+        height: 260px;
+    }
+
+    .final-result {
+        margin-top: 2%;
+
+    }
+
+    .results {
+        font-size: 3rem;
+    }
+    .opt {
+        gap: 10px;
+    }
+    .titulo {
+        font-size: 1rem !important;
+    }
+}
+@media (min-width: 1500px){
+    .mort {
+        display: flex !important;
+        width: 900px;
+        height: 500px;
+        margin-top: 15% !important;
+        background-color: white;
+        border-radius: 30px;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        -ms-border-radius: 30px;
+        -o-border-radius: 30px;
+} 
 }
