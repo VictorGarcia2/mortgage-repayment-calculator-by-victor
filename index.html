@@ -26,9 +26,9 @@
         <h2 class="fs-6">
           Mortgage Amount
         </h2>
-        <div>
-          <p class="position-absolute libra d-flex align-items-center justify-content-center">₤</p>
-          <input type="number" name="" id="">
+        <div class=".input">
+          <i class="position-absolute libra d-flex align-items-center justify-content-center">₤</i>
+          <input class="amount-data" type="number" name="" id="amount-data">
         </div>
       </label>
       <label for="" class="mb-4 w-100">
@@ -37,7 +37,7 @@
         </h2>
         <div class="d-flex  justify-content-end">
           <p class="position-absolute years d-flex align-items-center justify-content-center">years</p>
-          <input type="number" name="" id="">
+          <input class="amount-all"  type="number" name="" id="amount-years">
         </div>
       </label>
       <label for="" class="mb-4 w-100">
@@ -46,17 +46,17 @@
         </h2>
         <div class="d-flex  justify-content-end">
           <p class="position-absolute porcentaje d-flex align-items-center justify-content-center">%</p>
-          <input type="number" name="" id="">
+          <input class="amount-all"  type="number" name="" id="interest-rate">
         </div>
       </label>
-      <div for="" class="mb-4 ">
+      <div  class="mb-4 " 
         <h2 class="fs-6">
           Mortgage Type
         </h2>
-        <form class="">
+        <div class="" id="form">
           <div class=" border-0 mb-2">
-            <label class=" repayment d-flex align-items-center w-100">
-              <input class="radio  form-check-input mb-1 mx-3" type="radio" name="repayment" id="repayment" value="" />
+            <label class=" repayment d-flex align-items-center w-100" >
+              <input class="radio  form-check-input mb-1 mx-3" type="radio" name="repayment"  value="" id="repayment" />
               <p class="mortgage mt-3 fs-6">
                 Repayment
               </p>
@@ -71,51 +71,43 @@
             </label>
           </div>
           <span class="d-flex">
-            <button class="submit" id="submit">
+            <button class="submit" id="enviar">
               <img src="./assets/images/icon-calculator.svg" alt="">
               Calculate Repayments
             </button>
           </span>
-        </form>
-      </div>
-    </div>
-    <div class="bg-results px-4 text-white pt-4">
-      <h3> Your results</h3>
-      <p class="copy pb-2"> Your results are shown below based on the information you provided.
-        To adjust the results, edit the form and click “calculate repayments” again.</p>
-        <div  class="bg-primary">
-          <div class="bg-secondary">
-            <h4 class="fs6 pt-4 px-3">
-              Your monthly repayments
-            </h4>
-            <p class="results px-3">
-              ₤1,797.74
-            </p>
-            <hr class="divisor">
-            <h4 class="fs6 pt-4 px-3">
-              Total you'll repay over the term
-            </h4>
-            <p class="results-replay px-3">
-              ₤1,797.74
-            </p>
         </div>
       </div>
     </div>
-    <div></div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <div class="bg-results px-4 text-white pt-4">
+      <div class=" d-none final-result">
+        <h3> Your results</h3>
+        <p class="copy pb-2"> Your results are shown below based on the information you provided.
+          To adjust the results, edit the form and click “calculate repayments” again.</p>
+          <div  class="bg-primary">
+            <div class="bg-secondary">
+              <h4 class="fs6 pt-4 px-3">
+                Your monthly repayments
+              </h4>
+              <p class="results px-3" id="results-monthly">
+                ₤1,797.74
+              </p>
+              <hr class="divisor">
+              <h4 class="fs6 pt-4 px-3">
+                Total you'll repay over the term
+              </h4>
+              <p class="results-replay px-3" id="results-total">
+                ₤1,797.74
+              </p>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex  justify-content-center flex-column mt-4 empty">
+          <img src="./assets/images/illustration-empty.svg" alt="">   
+          <h5 class="text-center mt-4 fs-2"> Results show here </h5>   
+          <p>Complete the form and click "calculate repayments" to see what your monthly rapayments would be.</p>  
+      </div>
+    </div>
  
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
