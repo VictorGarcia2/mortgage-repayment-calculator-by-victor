@@ -27,35 +27,23 @@ function getResults() {
     mortgageAmount = parseFloat(amountData.value)
     mortgageTerm = parseInt(amountYears.value)
     interest = parseFloat(interestRate.value)
-    //if (mortgageAmount !== 0 && mortgageTerm !== 0 && interest !== 0) {
     p = mortgageAmount;
     int = interest / 100;
     r = int / 12;
     n = mortgageTerm * 12;
     let rs = (p * r * (1 + r) ** n) / ((1 + r) ** n - 1);
-    //send.addEventListener('click', () => {
     if (repayment.checked && mortgageAmount !== 0 && mortgageTerm !== 0 && interest !== 0) {
         resultsMonthly.textContent = `₤${rs.toLocaleString('en')}`
         total = rs * n
         resultsTotal.textContent = `₤${total.toLocaleString('en')}`
-        alertasTerm.style = ""
-        alertasAll.style = ""
-        libra.style = ""
-        years.style = ""
-        porcentaje.style = ""
-        toggleModal()
+        
         toggleModalResults()
     } else if (interestOnly.checked && mortgageAmount !== 0 && mortgageTerm !== 0 && interest !== 0) {
         let interesT = rs * n - p
         resultsMonthly.textContent = `₤${interesT.toLocaleString('en')}`
         total = rs * n
         resultsTotal.textContent = `₤${total.toLocaleString('en')}`
-        alertasTerm.style = ""
-        alertasAll.style = ""
-        libra.style = ""
-        years.style = ""
-        porcentaje.style = ""
-        toggleModal()
+     
         toggleModalResults()
     } else if (!repayment.checked && !interestOnly.checked && amountData.value === "" && amountYears.value === "" && interestRate.value === "") {
         alertas.style = "border: 1.4px solid hsl(4, 69%, 50%);"
@@ -64,12 +52,11 @@ function getResults() {
         libra.style = "background-color: hsl(4, 69%, 50%); color:white;"
         years.style = "background-color: hsl(4, 69%, 50%); color:white;"
         porcentaje.style = "background-color: hsl(4, 69%, 50%); color:white;"
-        fieldAlert.classList.toggle('d-none')
-        fieldAlertTerm.classList.toggle('d-none')
-        fieldAlertAll.classList.toggle('d-none')
+        fieldAlert.classList.remove('d-none')
+        fieldAlertTerm.classList.remove('d-none')
+        fieldAlertAll.classList.remove('d-none')
     }
-    //}) 
-    // }
+
 }
 
 function clearTablero() {
@@ -83,16 +70,54 @@ function clearTablero() {
     libra.style = ""
     years.style = ""
     porcentaje.style = ""
-    toggleModal()
+    ModalfinalResult.classList.add('d-none')
+
 }
-amountYears.addEventListener('input', getResults)
-amountData.addEventListener('input', getResults)
-interestRate.addEventListener('input', getResults)
+amountYears.addEventListener('input', () => {
+    if (amountYears.value) {
+        alertas.style = ""
+        alertasTerm.style = ""
+        alertasAll.style = ""
+        libra.style = ""
+        years.style = ""
+        porcentaje.style = ""
+        fieldAlert.classList.add('d-none')
+        fieldAlertTerm.classList.add('d-none')
+        fieldAlertAll.classList.add('d-none')
+    }
+})
+amountData.addEventListener('input', () => {
+    if (amountData.value) {
+        alertas.style = ""
+        alertasTerm.style = ""
+        alertasAll.style = ""
+        libra.style = ""
+        years.style = ""
+        porcentaje.style = ""
+        fieldAlert.classList.add('d-none')
+        fieldAlertTerm.classList.add('d-none')
+        fieldAlertAll.classList.add('d-none')
+    }
+})
+interestRate.addEventListener('input', () => {
+    if (interestRate.value) {
+        alertas.style = ""
+        alertasTerm.style = ""
+        alertasAll.style = ""
+        libra.style = ""
+        years.style = ""
+        porcentaje.style = ""
+        fieldAlert.classList.add('d-none')
+        fieldAlertTerm.classList.add('d-none')
+        fieldAlertAll.classList.add('d-none')
+    }
+})
 clear.addEventListener('click', clearTablero)
 function toggleModal() {
     empty.classList.toggle('d-none')
 }
 function toggleModalResults() {
-    ModalfinalResult.classList.toggle('d-none')
+    ModalfinalResult.classList.remove('d-none')
 }
 send.addEventListener('click', getResults)
+

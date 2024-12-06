@@ -114,7 +114,6 @@ i:focus{
     margin-right: 1px !important;
     width: 2.8125rem;
     height: 2.72rem;
-    
     border-radius: 0px 2px 2px 0px;
     font-weight: 700;
     font-family: "Plus Jakarta Sans", serif;
@@ -149,44 +148,6 @@ i:focus{
     -ms-border-radius: 3px;
     -o-border-radius: 3px;
 }
-
-/* input[type="radio"]{
-    display: none !important;
-}
-
-.repayment::before{
-    content: "";
-    height: 20px;
-    width: 20px;
-    border: 3px solid;
-    border-radius: 100%;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    -ms-border-radius: 100%;
-    -o-border-radius: 100%;
-}
-input[type="radio"]::checked + .repayment{
-    background-color: #0e2431 !important;
-    color: rgb(0, 124, 233) !important;
-}
-input[type="radio"]::checked + .repayment::before{
-    height: 16px;
-    width: 16px;
-    border: 10px solid white;
-    background-color: blueviolet;
-}
- */
-
-
-/* .repayment:hover{
-    background-color: hsla(61, 70%, 52%, 0.116);
-    border-color: hsl(61, 70%, 52%);
-}
-.radio:hover{
-    border-color: hsl(61, 70%, 52%);
-    background-color: hsl(61, 70%, 52%);
-} */
-
 .mortgage {
     font-weight: 700;
     font-family: "Plus Jakarta Sans", serif;
@@ -243,8 +204,8 @@ input[type="radio"]::checked + .repayment::before{
 .bg-secondary {
     position: absolute;
     margin-top: 1% !important;
-    width: 365px;
-    height: 230px;
+    min-width: 21.5rem;
+    min-height: 14.375rem;
     background-color: #0e2431 !important;
     border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -308,7 +269,7 @@ input[type="radio"]::checked + .repayment::before{
     font-style: normal;
     padding-top: 5px;
     margin: 0;
-    
+    position: absolute;
     
 }
 @media (min-width: 768px) {
@@ -325,7 +286,7 @@ input[type="radio"]::checked + .repayment::before{
     .mort {
         display: flex !important;
         width: 900px;
-        height: 500px;
+        height: 53%;
         margin-top: 10% !important;
         background-color: white;
         border-radius: 30px;
@@ -400,7 +361,7 @@ input[type="radio"]::checked + .repayment::before{
         text-align: center;
         margin-top: 1px;
         margin-right: 1px !important;
-        width: 2.8125rem;
+        width: 3.9125rem;
         height: 2.72rem;
         border-radius: 0px 2px 2px 0px;
         font-weight: 700;
@@ -418,7 +379,7 @@ input[type="radio"]::checked + .repayment::before{
         text-align: center;
         margin-top: 1px;
         margin-right: 1px !important;
-        width: 2.8125rem;
+        width: 3.9125rem;
         height: 2.72rem;
         border-radius: 0px 2px 2px 0px;
         font-weight: 700;
@@ -442,7 +403,7 @@ input[type="radio"]::checked + .repayment::before{
 } 
 }
 .control {
-    font-family: arial;
+    
     display: block;
     position: relative;
     padding-left: 30px;
@@ -451,35 +412,40 @@ input[type="radio"]::checked + .repayment::before{
     cursor: pointer;
     font-size: 14px;
 }
-    .control input {
+ .control input {
+    
         position: absolute;
         z-index: -1;
         opacity: 0;
     }
 .control_indicator {
+    margin-left: 10px;
     position: absolute;
-    
     left: 0;
-    height: 20px;
-    width: 20px;
-    background: #e6e6e6;
+    height: 15px;
+    width: 15px;
+    background: #ffffff;
     border: 0px dashed #fff900;
     border-radius: undefinedpx;
 }
 .control:hover input ~ .control_indicator,
 .control input:focus ~ .control_indicator {
-    background: #cccccc;
+    background: #d5d82f;
+
 }
 
 .control input:checked ~ .control_indicator {
-    background: ;
+   
+
+   border: 1px solid #d5d82f;
+    
 }
 .control:hover input:not([disabled]):checked ~ .control_indicator,
 .control input:checked:focus ~ .control_indicator {
-    background: #d5d82f;
+    background: #ffffff;
 }
 .control input:disabled ~ .control_indicator {
-    background: #e6e6e6;
+    background: #d5d82f;
     opacity: 0.6;
     pointer-events: none;
 }
@@ -493,18 +459,22 @@ input[type="radio"]::checked + .repayment::before{
     display: block;
 }
 .control-radio .control_indicator {
-    border-radius: 35%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 
 .control-radio .control_indicator:after {
-    left: 7px;
-    top: 7px;
-    height: 6px;
+    left: 3px;
+    top: 3px;
+    height: 7px;
     width: 7px;
     border-radius: 50%;
-    background: #ffffff;
+    background: #d5d82f;
     transition: background 250ms;
 }
 .control-radio input:disabled ~ .control_indicator:after {
-    background: #7b7b7b;
+    background: #ffffff;
 }
