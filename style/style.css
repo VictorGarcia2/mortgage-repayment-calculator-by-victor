@@ -43,7 +43,9 @@ span {
     width: 100%;
 }
 
-input {
+.input-container {
+    display: flex;
+    align-items: center;
     width: 100%;
     height: 2.8125rem;
     border-radius: 3px;
@@ -53,21 +55,60 @@ input {
     -o-border-radius: 3px;
     outline: none;
     border: 1.4px solid hsl(200, 24%, 40%);
-    
+    overflow: hidden;
+    cursor: pointer;
+}
+.input-container:focus-within{
+    border: 1px solid hwb(61 18% 15%);
+    background-color: hsla(61, 70%, 52%, 0.144);
+}
+.input-container-years:focus-within{
+    border: 1px solid hwb(61 18% 15%);
+    background-color: hsla(61, 70%, 52%, 0.144);
+}
+.input-container:focus-within .libra{
+    border: none;
+    background-color: hsl(61, 70%, 52%);
+    color: hsl(202, 55%, 16%);
+}
+.input-container-years:focus-within .years{
+    border: none;
+    background-color: hsl(61, 70%, 52%);
+    color: hsl(202, 55%, 16%);
+}
+.input-container-years:focus-within .porcentaje{
+    border: none;
+    background-color: hsl(61, 70%, 52%);
+    color: hsl(202, 55%, 16%);
+}
+.input-container-years {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    width: 100%;
+    height: 2.8125rem;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    outline: none;
+    border: 1.4px solid hsl(200, 24%, 40%);
+    overflow: hidden;
+    cursor: pointer;
+}
+input{
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 16px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0);
 }
 
-input:focus{
-    background-color: hsla(61, 70%, 52%, 0.116);
-    border-color: hsl(61, 70%, 52%);
-}
-
-i:focus{
-    background-color: hsla(61, 70%, 52%, 0.116);
-    border-color: hsl(61, 70%, 52%);
-}
 
 .amount-data {
-    padding-left: 60px;
+    padding-left: 10px;
     font-size: 1rem;
     color: hsl(202, 55%, 16%);
     text-decoration: none;
@@ -92,9 +133,8 @@ i:focus{
     background-color: hsl(202, 86%, 94%);
     color: hsl(202, 55%, 16%);
     text-align: center;
-    z-index: 1;
-    margin-top: 1px;
-    margin-left: 1px !important;
+    margin-top: 0px;
+    margin-left: 0px !important;
     width: 2.8125rem;
     height: 2.72rem;
     border-radius: 2px 0px 0px 2px;
@@ -111,9 +151,9 @@ i:focus{
 .years {
     background-color: hsl(202, 86%, 94%);
     text-align: center;
-    margin-top: 1px;
-    margin-right: 1px !important;
-    width: 2.8125rem;
+    margin-top: 0px;
+    margin-left: 0px !important;
+    width: 3.8125rem;
     height: 2.72rem;
     border-radius: 0px 2px 2px 0px;
     font-weight: 700;
@@ -130,14 +170,18 @@ i:focus{
     background-color: hsl(202, 86%, 94%);
     text-align: center;
     margin-top: 1px;
-    margin-right: 1px !important;
-    width: 2.8125rem;
+    margin-left: 1px !important;
+    width: 3.8125rem;
     height: 2.72rem;
     border-radius: 0px 2px 2px 0px;
     font-weight: 700;
     font-family: "Plus Jakarta Sans", serif;
     font-style: normal;
     text-decoration: none;
+    -webkit-border-radius: 0px 2px 2px 0px;
+    -moz-border-radius: 0px 2px 2px 0px;
+    -ms-border-radius: 0px 2px 2px 0px;
+    -o-border-radius: 0px 2px 2px 0px;
 }
 
 .repayment {
@@ -425,7 +469,12 @@ i:focus{
     height: 15px;
     width: 15px;
     background: #ffffff;
-    border: 1px solid #838383;
+    border: 0px dashed #fff900;
+    border-radius: undefinedpx;
+    -webkit-border-radius: undefinedpx;
+    -moz-border-radius: undefinedpx;
+    -ms-border-radius: undefinedpx;
+    -o-border-radius: undefinedpx;
 }
 .control:hover input ~ .control_indicator,
 .control input:focus ~ .control_indicator {
