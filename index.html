@@ -24,14 +24,15 @@
           </h1>
           <p id="clear">Clear All</p>
         </div>
-        <label for="" class="mb-4 w-100">
+        <label for="" class="w-100 mb-4" >
           <h2 class="fs-6">
             Mortgage Amount
           </h2>
           <div class=".input">
             <i class="position-absolute libra d-flex align-items-center justify-content-center">₤</i>
-            <input class="amount-data" type="number" name="" id="amount-data">
+            <input class="amount-data msj-alert" type="number" name="" id="amount-data">
           </div>
+          <p class="field alerta-field d-none">The field is required</p>
         </label>
         <div class="d-md-flex opt">
           <label for="" class="mb-4 w-100">
@@ -40,8 +41,9 @@
             </h2>
             <div class="d-flex  justify-content-end">
               <p class="position-absolute years d-flex align-items-center justify-content-center">years</p>
-              <input class="amount-all"  type="number" name="" id="amount-years">
+              <input class="amount-all msj-term"  type="number" name="" id="amount-years">
             </div>
+            <p class="field alerta-field-term d-none">The field is required</p>
           </label>
           <label for="" class="mb-4  w-100">
             <h2 class="fs-6">
@@ -49,8 +51,9 @@
             </h2>
             <div class="d-flex  justify-content-end">
               <p class="position-absolute porcentaje d-flex align-items-center justify-content-center">%</p>
-              <input class="amount-all"  type="number" name="" id="interest-rate">
+              <input class="amount-all msj-all"  type="number" name="" id="interest-rate">
             </div>
+            <p class="field alerta-field-all d-none">The field is required</p>
           </label>
         </div>
         <div  class="mb-4 ">
@@ -59,6 +62,36 @@
           </h2>
           <div class="" id="form">
             <div class=" border-0 mb-2">
+
+
+              
+
+
+
+              <label class="repayment control d-flex align-items-center control-radio mb-1">
+                <input class="radio  form-check-input mb-1 mx-3" type="radio" name="radio"  id="repayment"/>
+                <div class="control_indicator"></div>
+                <p class="mortgage mt-3 fs-6">
+                  Repayment
+                </p>
+            </label>
+            <label class=" repayment  control d-flex align-items-center control-radio">
+                <input class="radio  form-check-input mb-1 mx-3" type="radio" name="radio" id="interest-only"/>
+                <div class="control_indicator"></div>
+                <p class="mortgage mt-3 fs-6">
+                  Interest Only
+                </p>
+            </label>
+
+
+
+
+
+
+
+
+
+<!-- 
               <label class=" repayment d-flex align-items-center w-100" >
                 <input class="radio  form-check-input mb-1 mx-3" type="radio" name="radio"  value="" id="repayment" />
                 <p class="mortgage mt-3 fs-6">
@@ -72,8 +105,8 @@
                   value="" />
                 <p class="mortgage mt-3 fs-6">
                   Interest Only
-                </label>
                 </p>
+                </label> -->
             </div>
             <span class="d-flex ">
               <button class="submit" id="enviar">

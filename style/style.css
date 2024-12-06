@@ -55,12 +55,12 @@ input {
     border: 1.4px solid hsl(200, 24%, 40%);
 }
 
-input:hover {
+input:focus{
     background-color: hsla(61, 70%, 52%, 0.116);
     border-color: hsl(61, 70%, 52%);
 }
 
-i:active {
+i:focus{
     background-color: hsla(61, 70%, 52%, 0.116);
     border-color: hsl(61, 70%, 52%);
 }
@@ -90,38 +90,50 @@ i:active {
 .libra {
     background-color: hsl(202, 86%, 94%);
     color: hsl(202, 55%, 16%);
-    ;
     text-align: center;
+    z-index: 1;
     margin-top: 1px;
     margin-left: 1px !important;
     width: 2.8125rem;
-    height: 2.625rem;
+    height: 2.72rem;
+    border-radius: 2px 0px 0px 2px;
     font-weight: 700;
     font-family: "Plus Jakarta Sans", serif;
     font-style: normal;
     text-decoration: none;
+    -webkit-border-radius: 2px 0px 0px 2px;
+    -moz-border-radius: 2px 0px 0px 2px;
+    -ms-border-radius: 2px 0px 0px 2px;
+    -o-border-radius: 2px 0px 0px 2px;
 }
 
 .years {
     background-color: hsl(202, 86%, 94%);
     text-align: center;
-    margin-top: 1px !important;
-    margin-right: 2px !important;
-    width: 4.375rem;
-    height: 2.625rem;
+    margin-top: 1px;
+    margin-right: 1px !important;
+    width: 2.8125rem;
+    height: 2.72rem;
+    
+    border-radius: 0px 2px 2px 0px;
     font-weight: 700;
     font-family: "Plus Jakarta Sans", serif;
     font-style: normal;
     text-decoration: none;
+    -webkit-border-radius: 0px 2px 2px 0px;
+    -moz-border-radius: 0px 2px 2px 0px;
+    -ms-border-radius: 0px 2px 2px 0px;
+    -o-border-radius: 0px 2px 2px 0px;
 }
 
 .porcentaje {
     background-color: hsl(202, 86%, 94%);
     text-align: center;
-    margin-top: 1px !important;
-    margin-right: 2px !important;
+    margin-top: 1px;
+    margin-right: 1px !important;
     width: 2.8125rem;
-    height: 2.625rem;
+    height: 2.72rem;
+    border-radius: 0px 2px 2px 0px;
     font-weight: 700;
     font-family: "Plus Jakarta Sans", serif;
     font-style: normal;
@@ -287,7 +299,18 @@ input[type="radio"]::checked + .repayment::before{
     justify-content: center;
     align-items: center;
 }
-
+.field{
+    color: hsl(4, 69%, 50%);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: .8rem;
+    font-family: "Plus Jakarta Sans", serif;
+    font-style: normal;
+    padding-top: 5px;
+    margin: 0;
+    
+    
+}
 @media (min-width: 768px) {
     body {
         width: 100%;
@@ -353,6 +376,56 @@ input[type="radio"]::checked + .repayment::before{
     .titulo {
         font-size: 1rem !important;
     }
+    .libra {
+        background-color: hsl(202, 86%, 94%);
+        color: hsl(202, 55%, 16%);
+        text-align: center;
+        margin-top: 1px;
+        margin-left: 1px !important;
+        width: 2.8125rem;
+        height: 2.645rem;
+        border-radius: 2px 0px 0px 2px;
+        font-weight: 700;
+        font-family: "Plus Jakarta Sans", serif;
+        font-style: normal;
+        text-decoration: none;
+        -webkit-border-radius: 2px 0px 0px 2px;
+        -moz-border-radius: 2px 0px 0px 2px;
+        -ms-border-radius: 2px 0px 0px 2px;
+        -o-border-radius: 2px 0px 0px 2px;
+    }
+    
+    .years {
+        background-color: hsl(202, 86%, 94%);
+        text-align: center;
+        margin-top: 1px;
+        margin-right: 1px !important;
+        width: 2.8125rem;
+        height: 2.72rem;
+        border-radius: 0px 2px 2px 0px;
+        font-weight: 700;
+        font-family: "Plus Jakarta Sans", serif;
+        font-style: normal;
+        text-decoration: none;
+        -webkit-border-radius: 0px 2px 2px 0px;
+        -moz-border-radius: 0px 2px 2px 0px;
+        -ms-border-radius: 0px 2px 2px 0px;
+        -o-border-radius: 0px 2px 2px 0px;
+    }
+    
+    .porcentaje {
+        background-color: hsl(202, 86%, 94%);
+        text-align: center;
+        margin-top: 1px;
+        margin-right: 1px !important;
+        width: 2.8125rem;
+        height: 2.72rem;
+        border-radius: 0px 2px 2px 0px;
+        font-weight: 700;
+        font-family: "Plus Jakarta Sans", serif;
+        font-style: normal;
+        text-decoration: none;
+    }
 }
 @media (min-width: 1500px){
     .mort {
@@ -367,4 +440,71 @@ input[type="radio"]::checked + .repayment::before{
         -ms-border-radius: 30px;
         -o-border-radius: 30px;
 } 
+}
+.control {
+    font-family: arial;
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 5px;
+    padding-top: 2px;
+    cursor: pointer;
+    font-size: 14px;
+}
+    .control input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+.control_indicator {
+    position: absolute;
+    
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background: #e6e6e6;
+    border: 0px dashed #fff900;
+    border-radius: undefinedpx;
+}
+.control:hover input ~ .control_indicator,
+.control input:focus ~ .control_indicator {
+    background: #cccccc;
+}
+
+.control input:checked ~ .control_indicator {
+    background: ;
+}
+.control:hover input:not([disabled]):checked ~ .control_indicator,
+.control input:checked:focus ~ .control_indicator {
+    background: #d5d82f;
+}
+.control input:disabled ~ .control_indicator {
+    background: #e6e6e6;
+    opacity: 0.6;
+    pointer-events: none;
+}
+.control_indicator:after {
+    box-sizing: unset;
+    content: '';
+    position: absolute;
+    display: none;
+}
+.control input:checked ~ .control_indicator:after {
+    display: block;
+}
+.control-radio .control_indicator {
+    border-radius: 35%;
+}
+
+.control-radio .control_indicator:after {
+    left: 7px;
+    top: 7px;
+    height: 6px;
+    width: 7px;
+    border-radius: 50%;
+    background: #ffffff;
+    transition: background 250ms;
+}
+.control-radio input:disabled ~ .control_indicator:after {
+    background: #7b7b7b;
 }
