@@ -14,7 +14,7 @@ const clear = document.querySelector('#clear')
 let mortgageAmount = 0
 let mortgageTerm = 0
 let interest = 0
-
+let pause = false
 function getResults() {
     mortgageAmount = parseFloat(amountData.value)
     mortgageTerm = parseInt(amountYears.value)
@@ -25,14 +25,14 @@ function getResults() {
         r = int / 12;
         n = mortgageTerm * 12;
         let rs = (p * r * (1 + r) ** n) / ((1 + r) ** n - 1);
-        send.addEventListener('click', () => {
-            if (repayment.checked) {
+       send.addEventListener('click', () => {
+            if (repayment.checked && mortgageAmount !== 0 && mortgageTerm !== 0 && interest !== 0) {
                 resultsMonthly.textContent = `₤${rs.toLocaleString('en')}`
                 total = rs * n
                 resultsTotal.textContent = `₤${total.toLocaleString('en')}`
                 toggleModal()
                 toggleModalResults()
-            } else if(interestOnly.checked){            
+            } else if(interestOnly.checked && mortgageAmount !== 0 && mortgageTerm !== 0 && interest !== 0){            
                 let interesT = rs * n - p
                 resultsMonthly.textContent = `₤${interesT.toLocaleString('en')}`
                 total = rs * n
@@ -40,9 +40,10 @@ function getResults() {
                 toggleModal()
                 toggleModalResults()
             }
-        })
+       }) 
     }
 }
+
 function clearTablero() {
     amountData.value = ""
     amountYears.value = ""
@@ -61,4 +62,3 @@ function toggleModal() {
 function toggleModalResults() {
     ModalfinalResult.classList.toggle('d-none')
 }
-getResults() 
