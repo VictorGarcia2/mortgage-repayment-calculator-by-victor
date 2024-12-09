@@ -44,16 +44,20 @@ function getResults() {
         resultsTotal.textContent = `₤${total.toLocaleString('en')}`
         toggleModalResults()
     } else if (!repayment.checked || !interestOnly.checked && amountData.value === "" && amountYears.value === "" && interestRate.value === "") {
-        alertas.style = "border: 1.4px solid hsl(4, 69%, 50%);"
-        alertasTerm.style = "border: 1.4px solid hsl(4, 69%, 50%);"
-        alertasAll.style = "border: 1.4px solid hsl(4, 69%, 50%);"
-        libra.style = "background-color: hsl(4, 69%, 50%); color:white;"
-        years.style = "background-color: hsl(4, 69%, 50%); color:white;"
-        porcentaje.style = "background-color: hsl(4, 69%, 50%); color:white;"
-        fieldAlert.classList.remove('d-none')
-        fieldAlertTerm.classList.remove('d-none')
-        fieldAlertAll.classList.remove('d-none')
+        alertaVisual()
     }
+}
+
+function alertaVisual() {
+    alertas.style = "border: 1.4px solid hsl(4, 69%, 50%);"
+    alertasTerm.style = "border: 1.4px solid hsl(4, 69%, 50%);"
+    alertasAll.style = "border: 1.4px solid hsl(4, 69%, 50%);"
+    libra.style = "background-color: hsl(4, 69%, 50%); color:white;"
+    years.style = "background-color: hsl(4, 69%, 50%); color:white;"
+    porcentaje.style = "background-color: hsl(4, 69%, 50%); color:white;"
+    fieldAlert.classList.remove('d-none')
+    fieldAlertTerm.classList.remove('d-none')
+    fieldAlertAll.classList.remove('d-none')
 }
 
 function clearTablero() {
