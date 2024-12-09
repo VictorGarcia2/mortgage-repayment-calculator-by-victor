@@ -32,12 +32,15 @@ function getResults() {
     r = int / 12;
     n = mortgageTerm * 12;
     let rs = (p * r * (1 + r) ** n) / ((1 + r) ** n - 1);
-    if (repayment.checked && mortgageAmount !== 0 && mortgageTerm !== 0 && interest !== 0) {
+     
+    if (repayment.checked && mortgageAmount > 0 && mortgageTerm > 0 && interest > 0) {
+        console.log("algo mal");
         resultsMonthly.textContent = `₤${rs.toLocaleString('en')}`
         total = rs * n
         resultsTotal.textContent = `₤${total.toLocaleString('en')}`
         toggleModalResults()
-    } else if (interestOnly.checked && mortgageAmount !== 0 && mortgageTerm !== 0 && interest !== 0) {
+    } else if (interestOnly.checked  && mortgageAmount > 0 && mortgageTerm > 0 && interest > 0) {
+        console.log("algo mal");
         let interesT = rs * n - p
         resultsMonthly.textContent = `₤${interesT.toLocaleString('en')}`
         total = rs * n
@@ -59,7 +62,6 @@ function alertaVisual() {
     fieldAlertTerm.classList.remove('d-none')
     fieldAlertAll.classList.remove('d-none')
 }
-
 function clearTablero() {
     console.log("borrando");
     amountData.value = ""
