@@ -439,8 +439,11 @@ input{
 }
 @media (min-width: 800px ){
     .mort{
-        margin-top: 200px !important;
+        margin-top: 300px !important;
         height: 500px;
+    }
+    .empty{
+        width: 410px;
     }
 }
 @media (min-width: 1280px ){
