@@ -75,6 +75,9 @@ function clearTablero() {
     porcentaje.style = ""
     ModalfinalResult.classList.add('d-none')
     empty.classList.remove('d-none')
+    fieldAlert.classList.add('d-none')
+    fieldAlertTerm.classList.add('d-none')
+    fieldAlertAll.classList.add('d-none')
 
 }
 amountYears.addEventListener('input', () => {
