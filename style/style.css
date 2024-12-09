@@ -436,6 +436,11 @@ input{
         text-decoration: none;
     }
 }
+@media (min-width: 1280px ){
+    .mort{
+        height: 500px;
+    }
+}
 @media (min-width: 1500px){
     .mort {
         display: flex !important;
