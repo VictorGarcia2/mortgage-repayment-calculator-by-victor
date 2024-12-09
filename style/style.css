@@ -331,7 +331,8 @@ input{
     .mort {
         display: flex !important;
         width: 900px;
-        height: 53%;
+        min-height: 500px;
+        max-height: 500px;
         margin-top: 10% !important;
         background-color: white;
         border-radius: 30px;
