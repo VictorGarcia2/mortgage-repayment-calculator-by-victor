@@ -469,12 +469,12 @@ input{
     height: 15px;
     width: 15px;
     background: #ffffff;
-    border: 0px dashed #fff900;
-    border-radius: undefinedpx;
-    -webkit-border-radius: undefinedpx;
-    -moz-border-radius: undefinedpx;
-    -ms-border-radius: undefinedpx;
-    -o-border-radius: undefinedpx;
+    border: 1px solid #616161;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
 }
 .control:hover input ~ .control_indicator,
 .control input:focus ~ .control_indicator {
@@ -507,6 +507,7 @@ input{
     display: block;
 }
 .control-radio .control_indicator {
+    
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
