@@ -32,19 +32,17 @@ function getResults() {
     r = int / 12;
     n = mortgageTerm * 12;
     let rs = (p * r * (1 + r) ** n) / ((1 + r) ** n - 1);
-     
+
     if (repayment.checked && mortgageAmount > 0 && mortgageTerm > 0 && interest > 0) {
-        console.log("algo mal");
-        resultsMonthly.textContent = `₤${rs.toLocaleString('en')}`
+        resultsMonthly.textContent = `${rs.toLocaleString("en-GB",{ style: 'currency', currency: 'GBP'})}`
         total = rs * n
-        resultsTotal.textContent = `₤${total.toLocaleString('en')}`
+        resultsTotal.textContent = `${total.toLocaleString("en-GB",{ style: 'currency', currency: 'GBP'})}`
         toggleModalResults()
-    } else if (interestOnly.checked  && mortgageAmount > 0 && mortgageTerm > 0 && interest > 0) {
-        console.log("algo mal");
+    } else if (interestOnly.checked && mortgageAmount > 0 && mortgageTerm > 0 && interest > 0) {
         let interesT = rs * n - p
-        resultsMonthly.textContent = `₤${interesT.toLocaleString('en')}`
+        resultsMonthly.textContent = `${interesT.toLocaleString("en-GB",{ style: 'currency', currency: 'GBP'})}`
         total = rs * n
-        resultsTotal.textContent = `₤${total.toLocaleString('en')}`
+        resultsTotal.textContent = `${total.toLocaleString("en-GB",{ style: 'currency', currency: 'GBP'})}`
         toggleModalResults()
     } else if (!repayment.checked || !interestOnly.checked && amountData.value === "" && amountYears.value === "" && interestRate.value === "") {
         alertaVisual()
@@ -63,7 +61,6 @@ function alertaVisual() {
     fieldAlertAll.classList.remove('d-none')
 }
 function clearTablero() {
-    console.log("borrando");
     amountData.value = ""
     amountYears.value = ""
     interestRate.value = ""
