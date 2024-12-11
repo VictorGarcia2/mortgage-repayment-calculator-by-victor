@@ -59,7 +59,7 @@ span {
     cursor: pointer;
 }
 .input-container:focus-within{
-    border: 1px solid hwb(61 18% 15%);
+    border: 1px solid #d6d92e;
     background-color: hsla(61, 70%, 52%, 0.144);
 }
 .input-container-years:focus-within{
@@ -103,6 +103,7 @@ input{
     flex: 1;
     font-size: 16px;
     width: 100%;
+    height: 100%;
     background-color: rgba(255, 255, 255, 0);
 }
 
@@ -135,7 +136,7 @@ input{
     text-align: center;
     margin-top: 0px;
     margin-left: 0px !important;
-    width: 2.8125rem;
+    width: 3.8125rem;
     height: 2.72rem;
     border-radius: 2px 0px 0px 2px;
     font-weight: 700;
@@ -390,10 +391,10 @@ input{
         background-color: hsl(202, 86%, 94%);
         color: hsl(202, 55%, 16%);
         text-align: center;
-        margin-top: 1px;
-        margin-left: 1px !important;
+        margin-top: 0px;
+        margin-left: 0px !important;
         width: 2.8125rem;
-        height: 2.645rem;
+        height: 3.645rem;
         border-radius: 2px 0px 0px 2px;
         font-weight: 700;
         font-family: "Plus Jakarta Sans", serif;
@@ -408,8 +409,8 @@ input{
     .years {
         background-color: hsl(202, 86%, 94%);
         text-align: center;
-        margin-top: 1px;
-        margin-right: 1px !important;
+        margin-top: 0px;
+        margin-right: 0px !important;
         width: 3.9125rem;
         height: 2.72rem;
         border-radius: 0px 2px 2px 0px;
@@ -426,8 +427,8 @@ input{
     .porcentaje {
         background-color: hsl(202, 86%, 94%);
         text-align: center;
-        margin-top: 1px;
-        margin-right: 1px !important;
+        margin-top: 0px;
+        margin-right: 0px !important;
         width: 3.9125rem;
         height: 2.72rem;
         border-radius: 0px 2px 2px 0px;

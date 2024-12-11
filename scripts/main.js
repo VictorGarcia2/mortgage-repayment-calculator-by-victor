@@ -44,23 +44,30 @@ function getResults() {
         total = rs * n
         resultsTotal.textContent = `${total.toLocaleString("en-GB",{ style: 'currency', currency: 'GBP'})}`
         toggleModalResults()
-    } else if (!repayment.checked || !interestOnly.checked && amountData.value === "" && amountYears.value === "" && interestRate.value === "") {
+    } else if (!repayment.checked || !interestOnly.checked && amountData.value < 1 && amountYears.value < 1 && interestRate.value < 1) {
         alertaVisual()
     }
 }
 
 function alertaVisual() {
+
+
     alertas.style = "border: 1.4px solid hsl(4, 69%, 50%);"
-    alertasTerm.style = "border: 1.4px solid hsl(4, 69%, 50%);"
-    alertasAll.style = "border: 1.4px solid hsl(4, 69%, 50%);"
     libra.style = "background-color: hsl(4, 69%, 50%); color:white;"
-    years.style = "background-color: hsl(4, 69%, 50%); color:white;"
-    porcentaje.style = "background-color: hsl(4, 69%, 50%); color:white;"
     fieldAlert.classList.remove('d-none')
+
+    alertasTerm.style = "border: 1.4px solid hsl(4, 69%, 50%);"
+    years.style = "background-color: hsl(4, 69%, 50%); color:white;"
     fieldAlertTerm.classList.remove('d-none')
+
+    alertasAll.style = "border: 1.4px solid hsl(4, 69%, 50%);"
+    porcentaje.style = "background-color: hsl(4, 69%, 50%); color:white;"
     fieldAlertAll.classList.remove('d-none')
+
 }
 function clearTablero() {
+    repayment.checked = false
+    interestOnly.checked = false
     amountData.value = ""
     amountYears.value = ""
     interestRate.value = ""
@@ -79,40 +86,23 @@ function clearTablero() {
 }
 amountYears.addEventListener('input', () => {
     if (amountYears.value) {
-        alertas.style = ""
         alertasTerm.style = ""
-        alertasAll.style = ""
-        libra.style = ""
         years.style = ""
-        porcentaje.style = ""
-        fieldAlert.classList.add('d-none')
         fieldAlertTerm.classList.add('d-none')
-        fieldAlertAll.classList.add('d-none')
     }
 })
 amountData.addEventListener('input', () => {
     if (amountData.value) {
         alertas.style = ""
-        alertasTerm.style = ""
-        alertasAll.style = ""
         libra.style = ""
-        years.style = ""
-        porcentaje.style = ""
         fieldAlert.classList.add('d-none')
-        fieldAlertTerm.classList.add('d-none')
-        fieldAlertAll.classList.add('d-none')
+       
     }
 })
 interestRate.addEventListener('input', () => {
     if (interestRate.value) {
-        alertas.style = ""
-        alertasTerm.style = ""
         alertasAll.style = ""
-        libra.style = ""
-        years.style = ""
         porcentaje.style = ""
-        fieldAlert.classList.add('d-none')
-        fieldAlertTerm.classList.add('d-none')
         fieldAlertAll.classList.add('d-none')
     }
 })
