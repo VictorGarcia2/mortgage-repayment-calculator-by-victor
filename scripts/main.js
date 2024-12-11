@@ -19,6 +19,7 @@ const porcentaje = document.querySelector('.porcentaje')
 const fieldAlert = document.querySelector('.alerta-field')
 const fieldAlertTerm = document.querySelector('.alerta-field-term')
 const fieldAlertAll = document.querySelector('.alerta-field-all')
+const fieldAlertRadio = document.querySelector('.alerta-field-radio')
 let mortgageAmount = 0
 let mortgageTerm = 0
 let interest = 0
@@ -63,6 +64,7 @@ function alertaVisual() {
     alertasAll.style = "border: 1.4px solid hsl(4, 69%, 50%);"
     porcentaje.style = "background-color: hsl(4, 69%, 50%); color:white;"
     fieldAlertAll.classList.remove('d-none')
+    fieldAlertRadio.classList.remove('d-none')
 
 }
 function clearTablero() {
