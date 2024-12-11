@@ -51,8 +51,6 @@ function getResults() {
 }
 
 function alertaVisual() {
-
-
     alertas.style = "border: 1.4px solid hsl(4, 69%, 50%);"
     libra.style = "background-color: hsl(4, 69%, 50%); color:white;"
     fieldAlert.classList.remove('d-none')
@@ -67,6 +65,15 @@ function alertaVisual() {
     fieldAlertRadio.classList.remove('d-none')
 
 }
+function  radioCheck() {
+    repayment.addEventListener('click', ()=>{
+        fieldAlertRadio.classList.add('d-none')
+    })
+    interestOnly.addEventListener('click', ()=>{
+        fieldAlertRadio.classList.add('d-none')
+    })
+}
+radioCheck()
 function clearTablero() {
     repayment.checked = false
     interestOnly.checked = false
